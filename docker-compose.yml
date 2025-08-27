@@ -1,0 +1,9 @@
+
+services:
+  team-reassignment:
+    image: node:24.6
+    working_dir: /app
+    command: npm start -- --teams ${TEAMS} --seed ${SEED}
+    # command: npm install fs csv-parser
+    volumes:
+      - ./:/app
